@@ -8,7 +8,7 @@ months = ['January', 'February', 'March', 'April', 'May', 'June']
 days = ['Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 loading = '.'*4
-section_breaker = '='*60
+section_breaker = '='*65
 
 def loader():
     """ Prints a 'Please wait ...' to mimic a loader """
