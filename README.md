@@ -1,11 +1,11 @@
 ### Date created
-7th February, 2021
+9th February, 2021
 
 ### Project Title
 Explore US Bikeshare data
 
 ### Description
-Bikeshare.py includes functions (in python) that explores the bikeshare use in Chicago, New York City, and Washington by computing a variety of descriptive statistics.
+bikeshare.py includes functions (in python) that explores the bikeshare use in Chicago, New York City, and Washington by computing a variety of descriptive statistics.
 The following are queries/statistics run:
   **1 Popular times of travel (i.e., occurs most often in the start time)**
       * most common month
