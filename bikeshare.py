@@ -8,7 +8,7 @@ months = ['January', 'February', 'March', 'April', 'May', 'June']
 days = ['Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 loading = '.'*4
-section_breaker = '='*60
+section_breaker = '='*65
 
 def loader():
     """ Prints a 'Please wait ...' to mimic a loader """
@@ -181,7 +181,7 @@ def user_info(city_data):
     try:
         user_type_count = city_data['User Type'].value_counts()
         # assign the value `NA` to computations that may be unavailable for some cities
-        gender_count, earliest_yob, most_common_yob, most_recent_yob = 'NA', 'NA', 'NA', 'NA'
+        gender_count, earliest_yob, most_common_yob, most_recent_yob = 'Not Provided', 'Not Provided', 'Not Provided', 'Not Provided'
 
         # check city user specified to ensure columns needed for these computations are present
         if city.upper() in ['NY', 'CHI']:
@@ -191,7 +191,7 @@ def user_info(city_data):
             sorted_city_data = city_data.sort_values('Start Time', ascending=False)
             most_recent_yob = sorted_city_data['Birth Year'].iloc[0]
 
-        return 'User Type Count: \n{}\n \nGender Count: \n{}\n \nEarliest Year of Birth = {}\nMost Common YOB = {}, Most Recent YOB = {}'.format(user_type_count, gender_count, earliest_yob, most_common_yob, most_recent_yob)
+        return 'User Type Count: \n{}\n \nGender Count: \n{}\n \nEarliest Year of Birth = {},\nMost Common YOB = {},\nMost Recent YOB = {}'.format(user_type_count, gender_count, earliest_yob, most_common_yob, most_recent_yob)
     except Exception as e:
         return 'An error occurred: {}'.format(e)
 
